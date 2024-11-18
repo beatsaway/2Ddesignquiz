@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D Design V2 Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      background: #ffffff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 15px 0;
+      color: #555;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #007acc;
+    }
+
+    .shortcut {
+      background: #f9f9f9;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .question-container {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    .question-container h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .question-container ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .question-container ul li {
+      margin: 5px 0;
+    }
+
+    .question-container input {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #005f99;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .feedback.correct {
+      color: green;
+    }
+
+    .feedback.wrong {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>2D Design V2: Quick Start Guide</h1>
+
+    <!-- Section: Getting Started -->
+    <h2>Getting Started</h2>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?controls=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>How do you open 2D Design?</p>
+      <ul>
+        <li><input type="radio" name="q1" value="wrong"> Open Paint from Start menu</li>
+        <li><input type="radio" name="q1" value="correct"> Click Start, then search for 2D Design</li>
+        <li><input type="radio" name="q1" value="wrong"> Use File Explorer to find it</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q1', 'correct')">Submit</button>
+      <div class="feedback" id="q1-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>How to open 2D Design:</strong> Click <span class="highlight">Start</span>, then search for <span class="highlight">2D Design</span>.</li>
+    </ul>
+
+    <!-- Section: Drawing Basics -->
+    <h2>Drawing Basics</h2>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?controls=0&amp;start=17" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>Do you need to hold and drag to draw lines?</p>
+      <ul>
+        <li><input type="radio" name="q2" value="wrong"> Yes, hold and drag the mouse</li>
+        <li><input type="radio" name="q2" value="correct"> No, click once to start and again to finish</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q2', 'correct')">Submit</button>
+      <div class="feedback" id="q2-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Do you need to hold and drag to draw lines?</strong> No. Click <span class="highlight">once</span> to start a line. Click again to finish it.</li>
+      <li><strong>Undo:</strong> Use <span class="shortcut">Ctrl + Z</span> (Once only)</li>
+    </ul>
+
+    <!-- Relative Input Boxes -->
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?controls=0&amp;start=74" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>What does entering a positive value in the first relative input box do?</p>
+      <ul>
+        <li><input type="radio" name="q3" value="correct"> Moves the end point right</li>
+        <li><input type="radio" name="q3" value="wrong"> Moves the end point up</li>
+        <li><input type="radio" name="q3" value="wrong"> Moves the end point left</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q3', 'correct')">Submit</button>
+      <div class="feedback" id="q3-feedback"></div>
+    </div>
+    <ul>
+      <li>The <span class="highlight">first box</span> with positive value moves the end point <span class="highlight">right</span>.</li>
+      <li>The <span class="highlight">second box</span> with positive value moves the end point <span class="highlight">up</span>.</li>
+    </ul>
+
+    <!-- Section: Snapping to the Grid -->
+    <h2>Snapping to the Grid</h2>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?controls=0&amp;start=196" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>What does the Grid Lock feature do?</p>
+      <ul>
+        <li><input type="radio" name="q4" value="correct"> Snaps cursor to grid dots</li>
+        <li><input type="radio" name="q4" value="wrong"> Changes the grid color</li>
+        <li><input type="radio" name="q4" value="wrong"> Locks the toolbars</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q4', 'correct')">Submit</button>
+      <div class="feedback" id="q4-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Grid Lock:</strong> Clicking the right menu's <span class="highlight">Grid Lock</span> snaps the mouse cursor to the grid dots.</li>
+      <li><strong>Setting grid dot distance:</strong> Double-click the <span class="highlight">dot dot dot</span> in the right menu to adjust the distance between grid dots.</li>
+    </ul>
+
+    <!-- Section: Laser Cutting Guidelines -->
+    <h2>Laser Cutting Guidelines</h2>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?controls=0&amp;start=478" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>What will the machine do with black lines?</p>
+      <ul>
+        <li><input type="radio" name="q5" value="correct"> Laser cut</li>
+        <li><input type="radio" name="q5" value="wrong"> Laser engrave</li>
+        <li><input type="radio" name="q5" value="wrong"> Ignore them</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q5', 'correct')">Submit</button>
+      <div class="feedback" id="q5-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Black lines:</strong> The machine will <span class="highlight">laser cut</span> black lines.</li>
+      <li><strong>Red lines:</strong> The machine will <span class="highlight">laser engrave</span> red lines.</li>
+    </ul>
+
+    <!-- Section: Selection and Editing Tools -->
+    <h2>Selection and Editing Tools</h2>
+    <ul>
+      <li><strong>Selecting objects:</strong> Use the mouse tool to drag-select objects or hold <span class="shortcut">Shift</span> to click-select multiple items.</li>
+      <li><strong>Changing line color:</strong> Click <span class="highlight">Col..</span> next to <span class="highlight">Line</span> in the top toolbar to adjust line color.</li>
+    </ul>
+
+    <!-- Resize Objects -->
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?start=570" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>What factor should you use to enlarge an object?</p>
+      <ul>
+        <li><input type="radio" name="q6" value="wrong"> Less than 1</li>
+        <li><input type="radio" name="q6" value="correct"> Greater than 1</li>
+        <li><input type="radio" name="q6" value="wrong"> Exactly 0</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q6', 'correct')">Submit</button>
+      <div class="feedback" id="q6-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Resize objects:</strong> Hold to select alter size tool to resize things.
+        <ul>
+          <li>Enter a factor <span class="highlight">less than 1</span> to shrink.</li>
+          <li>Enter a factor <span class="highlight">greater than 1</span> to enlarge.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Delete Segments Tool -->
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?start=800" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>Which tool allows you to create interesting shapes by removing parts?</p>
+      <ul>
+        <li><input type="radio" name="q7" value="correct"> Delete Segments Tool</li>
+        <li><input type="radio" name="q7" value="wrong"> Grid Lock</li>
+        <li><input type="radio" name="q7" value="wrong"> ABC Tool</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q7', 'correct')">Submit</button>
+      <div class="feedback" id="q7-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Delete Segments Tool:</strong> Use this tool to create interesting shapes.</li>
+    </ul>
+
+    <!-- Section: Text and Engraving Tools -->
+    <h2>Text and Engraving Tools</h2>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?start=497" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>When adding text, what should the line color and fill be set to?</p>
+      <ul>
+        <li><input type="radio" name="q8" value="correct"> Line: red, Fill: no fill</li>
+        <li><input type="radio" name="q8" value="wrong"> Line: black, Fill: white</li>
+        <li><input type="radio" name="q8" value="wrong"> Line: blue, Fill: yellow</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q8', 'correct')">Submit</button>
+      <div class="feedback" id="q8-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Adding text:</strong> Use the <span class="highlight">ABC Tool</span> to enter text. Ensure:
+        <ul>
+          <li>Line color is set to <span class="highlight">red</span>.</li>
+          <li>Fill is set to <span class="highlight">no fill</span>.</li>
+        </ul>
+      </li>
+      <li><strong>Editing text:</strong> Click <span class="highlight">Property</span> to re-edit text.</li>
+    </ul>
+
+    <!-- Contour Tool -->
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?controls=0&amp;start=435" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>What does the Contour Tool do?</p>
+      <ul>
+        <li><input type="radio" name="q9" value="correct"> Doubles engraving lines</li>
+        <li><input type="radio" name="q9" value="wrong"> Changes line colors</li>
+        <li><input type="radio" name="q9" value="wrong"> Deletes text</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q9', 'correct')">Submit</button>
+      <div class="feedback" id="q9-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Contour Tool:</strong> This tool doubles engraving lines for added effects.</li>
+    </ul>
+
+    <!-- Section: Shortcut Keys -->
+    <h2>Shortcut Keys</h2>
+    <ul>
+      <li><span class="shortcut">Ctrl + A</span>: Select all objects.</li>
+      <li><span class="shortcut">Ctrl + G</span>: Group selected objects.</li>
+      <li><span class="shortcut">Ctrl + E</span>: Ungroup selected objects.</li>
+      <li><span class="shortcut">Ctrl + V</span>: Paste copied images into the software.</li>
+      <li><span class="shortcut">Alt + Tab</span>: Quickly switch between open windows.</li>
+      <li><span class="shortcut">Ctrl + S</span>: Save your work.</li>
+    </ul>
+
+    <!-- Shortcut Keys Videos and Questions -->
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?start=846" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- Ctrl + A Question -->
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>What does Ctrl + A do?</p>
+      <ul>
+        <li><input type="radio" name="q10" value="correct"> Select all objects</li>
+        <li><input type="radio" name="q10" value="wrong"> Save your work</li>
+        <li><input type="radio" name="q10" value="wrong"> Paste an image</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q10', 'correct')">Submit</button>
+      <div class="feedback" id="q10-feedback"></div>
+    </div>
+
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?start=962" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- Ctrl + G and Ctrl + E Question -->
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>What is the shortcut to group selected objects?</p>
+      <ul>
+        <li><input type="radio" name="q11" value="correct"> Ctrl + G</li>
+        <li><input type="radio" name="q11" value="wrong"> Ctrl + E</li>
+        <li><input type="radio" name="q11" value="wrong"> Ctrl + V</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q11', 'correct')">Submit</button>
+      <div class="feedback" id="q11-feedback"></div>
+    </div>
+
+    <!-- Section: Advanced Tools -->
+    <h2>Advanced Tools</h2>
+    <ul>
+      <li><strong>Vectorize Tool:</strong> Converts an image into vector lines for cutting or engraving.</li>
+    </ul>
+
+    <!-- Section: Zoom Tools -->
+    <h2>Zoom Tools</h2>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ib98V5U7uxM?start=713" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="question-container">
+      <h3>Question:</h3>
+      <p>Which zoom tool allows you to see the entire canvas?</p>
+      <ul>
+        <li><input type="radio" name="q12" value="wrong"> Zoom In</li>
+        <li><input type="radio" name="q12" value="wrong"> Zoom All</li>
+        <li><input type="radio" name="q12" value="correct"> Zoom Media</li>
+      </ul>
+      <button class="submit-btn" onclick="checkAnswer('q12', 'correct')">Submit</button>
+      <div class="feedback" id="q12-feedback"></div>
+    </div>
+    <ul>
+      <li><strong>Zoom In (left menu):</strong> Drag a rectangle to zoom into that area.</li>
+      <li><strong>Zoom All (right menu):</strong> See all objects.</li>
+      <li><strong>Zoom Media (right menu):</strong> See the whole canvas.</li>
+    </ul>
+
+  </div>
+
+  <script>
+    function checkAnswer(questionName, correctValue) {
+      const options = document.getElementsByName(questionName);
+      const feedback = document.getElementById(questionName + '-feedback');
+      let selected = null;
+      for (let option of options) {
+        if (option.checked) {
+          selected = option.value;
+          break;
+        }
+      }
+      if (selected === correctValue) {
+        feedback.textContent = "Correct! ✅";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Wrong! ❌";
+        feedback.className = "feedback wrong";
+      }
+    }
+  </script>
+</body>
+</html>
